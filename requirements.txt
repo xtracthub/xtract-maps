@@ -1,6 +1,0 @@
-python-resize-image
-Pillow
-numpy
-scipy
-argparse
-scikit-learn
