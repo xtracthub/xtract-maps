@@ -59,8 +59,7 @@ def min_by_val(d, direc):
     d (dictionary): A direction-to-location-to-coordinate dictionary as
     returned by get_coordinates_from_text.
     direc (str): The direction you want to find the smallest
-    coordinate from
-    ('N', 'E', 'S', 'W' )
+    coordinate from ('N', 'E', 'S', 'W' ).
 
     Return:
     (tuple): 3-tuple of location, coordinate, direction.
@@ -109,8 +108,7 @@ def coord_from_abs(value, orientation, flip_lon=False, to_int=False):
     to_int (bool): Whether to cast value as an int.
 
     Return:
-    (tuple): 2-tuple of a positive value and a direction
-    ('N', 'E', 'S', 'W').
+    (tuple): 2-tuple of a positive value and a direction ('N', 'E', 'S', 'W').
     """
     orientation = orientation.upper()
     if to_int:
