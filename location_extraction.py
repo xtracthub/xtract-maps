@@ -342,7 +342,7 @@ def extract_location_metadata_with_borders(img, border_index, city_index,
     # Extract borders, and then regions found
     pixel_borders = extract_borders(cv_img, path_given=False,
                                     approximation=approximation, close=True,
-                                    close_window_size=8, debug=debug)
+                                    debug=debug)
     coord_borders = borders_to_coordinates(pixel_borders, pixel_to_coords,
                                            absolute=True)
     regions = borders_to_regions(coord_borders, border_index,
