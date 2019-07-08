@@ -14,7 +14,8 @@ class UnionFind:
     """
     def __init__(self, n):
         """Initializes a forest of n up-trees with each
-        node as a root."""
+        node as a root.
+        """
         self.parents = np.arange(n)
         self.sizes = np.ones(n)
 
@@ -28,7 +29,8 @@ class UnionFind:
         j (int): Value of second up-tree.
 
         Return:
-        Put what this returns.
+        (list): List with smaller up-tree linked to the root of the
+        larger up-tree.
         """
         root_i, root_j = self.find(i), self.find(j)
         if root_i == root_j:
@@ -61,7 +63,7 @@ class UnionFind:
     def groups(self):
         """Returns a list of disjoint lists where each disjoint list
         contains the indices of all nodes in the
-        corresponding up-tree
+        corresponding up-tree.
 
         Return:
         (list): List of indices of nodes in corresponding up-tree.
