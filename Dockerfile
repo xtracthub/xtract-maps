@@ -18,3 +18,5 @@ RUN pip install numpy opencv-python Pillow shapely
 RUN apt install tesseract-ocr -y
 RUN apt install libtesseract-dev -y
 RUN pip install pytesseract
+
+CMD ["python", "xtract_maps_main.py"]
