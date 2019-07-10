@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: an-example-pypi-project
+Version: 0.0.4
+Summary: An demonstration of how to create, document, and publish to the cheese shop a5 pypi.org.
+Home-page: http://packages.python.org/an_example_pypi_project
+Author: Andrew Carter
+Author-email: andrewjcarter@gmail.com
+License: BSD
+Description: Hello. 
+        
+Keywords: example documentation tutorial
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: BSD License

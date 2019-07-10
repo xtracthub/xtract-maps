@@ -30,6 +30,8 @@ class MapTests(unittest.TestCase):
 
     def test_img1(self):
         img1_metadata = extract_map_metadata(img1)
+        print(img1_metadata)
+
         for i in range(3):
             self.assertTrue(img1_metadata[i])
 

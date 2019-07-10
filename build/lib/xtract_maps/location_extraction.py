@@ -99,10 +99,10 @@ def load_border_index(index_name='unit'):
         raise ValueError('index_name must be one of %s' % index_names)
 
     name_to_index = {
-        'country': 'country_shapefiles/country.json',
-        'unit': 'country_shapefiles/map_units.json',
-        'subunit': 'country_shapefiles/map_subunits.json',
-        'sovereign': 'country_shapefiles/map_sovereign.json',
+        'country': 'xtract_maps/country_shapefiles/country.json',
+        'unit': 'xtract_maps/country_shapefiles/map_units.json',
+        'subunit': 'xtract_maps/country_shapefiles/map_subunits.json',
+        'sovereign': 'xtract_maps/country_shapefiles/map_sovereign.json',
     }
 
     with open(name_to_index[index_name]) as f:
@@ -110,7 +110,7 @@ def load_border_index(index_name='unit'):
     return OrderedDict(index)
 
 
-def load_city_index(path='city_index.json'):
+def load_city_index(path='xtract_maps/city_index.json'):
     """Loads a city index from a JSON file.
 
     Parameter:
