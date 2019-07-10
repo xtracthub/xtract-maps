@@ -1,4 +1,4 @@
-# Skluma Location Extraction Module
+# Xtractor Map Location
 
 This pipeline consists of 5 main modules, with each building directly
 on the one before it. There is also a 6th UnionFind utility module.
