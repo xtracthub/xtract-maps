@@ -5,18 +5,12 @@ MAINTAINER Ryan Wong
 RUN apt-get update
 
 # Copy files
-COPY unionfind.py /
-COPY contouring.py /
-COPY text_extraction.py /
-COPY coordinate_extraction.py /
-COPY border_extraction.py /
-COPY location_extraction.py /
-COPY xtract_maps_main.py /
+COPY code code
+COPY data data
+COPY tests tests
 
 # Install dependencies
-RUN pip install numpy opencv-python Pillow shapely
-RUN apt install tesseract-ocr -y
-RUN apt install libtesseract-dev -y
-RUN pip install pytesseract
+RUN pip install numpy opencv-python Pillow shapely pytesseract
+RUN apt install tesseract-ocr -y libtesseract-dev -y
 
-CMD ["python", "xtract_maps_main.py"]
+ENTRYPOINT ["python", "code/xtract_maps_main.py"]
