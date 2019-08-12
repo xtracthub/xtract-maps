@@ -63,6 +63,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     t0 = time.time()
     meta = {"map": extract_map_metadata(args.path, args.debug)}
-    print(meta)
     t1 = time.time()
+    meta.update({"extract time": (t1 - t0)})
+    print(meta)
     print(t1 - t0)
