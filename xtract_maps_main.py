@@ -33,13 +33,14 @@ def extract_map_metadata(filename, debug=False):
     metadata (tuple): 3-tuple of coordinate span of img, regions found in img,
     and text directly found in img.
     """
-
+    t0 = time.time()
     indices = get_indices()
     city_index = indices[0]
     border_index = indices[1]
-    metadata = extract_location_metadata(filename, border_index,
-                                         city_index, path_given=True,
-                                         debug=debug)
+    metadata = {"map": extract_location_metadata(filename, border_index,
+                                                 city_index, path_given=True,
+                                                 debug=debug)}
+    metadata.update({"extract time": time.time() - t0})
 
     return metadata
 
@@ -61,9 +62,6 @@ if __name__ == "__main__":
                         required=False, default=False)
 
     args = parser.parse_args()
-    t0 = time.time()
-    meta = {"map": extract_map_metadata(args.path, args.debug)}
-    t1 = time.time()
-    meta.update({"extract time": (t1 - t0)})
+
+    meta = extract_map_metadata(args.path, args.debug)
     print(meta)
-    print(t1 - t0)
